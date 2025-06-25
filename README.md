@@ -5,7 +5,7 @@ A simple Flask-based inventory tracking API to:
 - Add items
 - Update quantities
 - Trigger alerts when quantity falls below a threshold
-
+![cmd running](./inventory/successful-running.png)
 ---
 
 ## 🔗 API Endpoints
@@ -20,7 +20,7 @@ A simple Flask-based inventory tracking API to:
   "threshold": 5
 }
 ```
-
+![add item](./inventory/add.png)
 
 ---
 
@@ -33,6 +33,8 @@ A simple Flask-based inventory tracking API to:
   "delta": -10
 }
 ```
+
+![update item](./inventory/update.png)
 
 ---
 
@@ -48,7 +50,8 @@ A simple Flask-based inventory tracking API to:
     "alert": false
   }
 ]
-
+```
+![updated items](./inventory/updated-all.png)
 
 ## ✍️ Author
 Harshitha Chowdappa
