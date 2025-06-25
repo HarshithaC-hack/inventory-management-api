@@ -21,6 +21,7 @@ A simple Flask-based inventory tracking API to:
 }
 ```
 
+
 ---
 
 ### 🔁 Update Quantity
