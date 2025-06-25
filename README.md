@@ -30,7 +30,7 @@ A simple Flask-based inventory tracking API to:
 ```json
 {
   "name": "Notebook",
-  "delta": -10
+  "delta": -27
 }
 ```
 
@@ -44,10 +44,11 @@ A simple Flask-based inventory tracking API to:
 ```json
 [
   {
+    "alert": true
     "name": "Notebook",
-    "quantity": 20,
+    "quantity": 3,
     "threshold": 5,
-    "alert": false
+    
   }
 ]
 ```
