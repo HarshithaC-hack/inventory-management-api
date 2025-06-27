@@ -4,7 +4,7 @@ from inventory.db import get_connection
 def add_item(data):
     conn = get_connection()
     cursor = conn.cursor()
-    
+
     # Check if item already exists
     cursor.execute("SELECT * FROM inventory WHERE name = ?", (data['name'],))
     existing = cursor.fetchone()
@@ -16,8 +16,10 @@ def add_item(data):
     cursor.execute("INSERT INTO inventory (name, quantity, threshold) VALUES (?, ?, ?)",
                    (data['name'], data['quantity'], data['threshold']))
     conn.commit()
+
+    alert = data['quantity'] < data['threshold']
     conn.close()
-    return {"status": "Item added"}
+    return {"status": "Item added", "alert": alert}
 
 
 def update_item(data):
